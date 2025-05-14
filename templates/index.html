@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Consumo Eléctrico</title>
+    <p class="text-muted">Datos actuales en tabla: <strong>{{ total }}</strong></p>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+    <h1 class="text-center mb-4">Sistema de Consumo Eléctrico</h1>
+
+    <form method="POST" class="mb-4">
+        <button class="btn btn-primary" type="submit">Leer datos</button>
+    </form>
+
+    <h3>Resumen de Consumo</h3>
+    <div class="table-responsive">
+        {{ tabla | safe }}
+    </div>
+
+    <hr>
+
+    <h3>Gráfico de Consumo</h3>
+    <div>
+        {{ grafico | safe }}
+    </div>
+</body>
+</html>
